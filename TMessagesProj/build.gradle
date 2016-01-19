@@ -24,6 +24,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
 
+    /*
     signingConfigs {
         debug {
             storeFile file("config/release.keystore")
@@ -39,19 +40,20 @@ android {
             keyPassword RELEASE_KEY_PASSWORD
         }
     }
+    */
 
     buildTypes {
         debug {
             debuggable true
             jniDebuggable true
-            signingConfig signingConfigs.debug
+            //signingConfig signingConfigs.debug
             applicationIdSuffix ".beta"
         }
 
         release {
             debuggable false
             jniDebuggable false
-            signingConfig signingConfigs.release
+            //signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -59,7 +61,7 @@ android {
         foss {
             debuggable false
             jniDebuggable false
-            signingConfig signingConfigs.release
+            //signingConfig signingConfigs.release
         }
     }
 
