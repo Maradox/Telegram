@@ -766,12 +766,15 @@ public class AndroidUtilities {
     }*/
 
     public static void checkForCrashes(Activity context) {
+        // Disable CrashManager, since we don't use
+        /*
         CrashManager.register(context, BuildVars.DEBUG_VERSION ? BuildVars.HOCKEY_APP_HASH_DEBUG : BuildVars.HOCKEY_APP_HASH, new CrashManagerListener() {
             @Override
             public boolean includeDeviceData() {
                 return true;
             }
         });
+        */
     }
 
     public static void checkForUpdates(Activity context) {
